@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="project">
+<head>
+    <meta charset="UTF-8">
+    <title>angular. js app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="main">
+
+    <div class="header">
+        <h1>{{title}}</h1>
+        <input ng-model="field">
+        <p>Type something to surprise!</p>
+        <p>{{field}}</p>
+    </div>
+
+    <div class="container">
+        <div class="category-container">
+            <ul ng-repeat="category in categories">
+                <li><a href="#">{{category.title}}</a></li>
+            </ul>
+        </div>
+
+        <div class="bookmark-container">
+            <ul ng-repeat="bookmark in bookmarks">
+                <li><a href={{bookmark.url}} target="_blank">{{bookmark.title}}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
